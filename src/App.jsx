@@ -3,12 +3,21 @@ import DashBoard from "./components/DashBoard";
 import GuestForm from "./components/GuestForm";
 import GuestTable from "./components/GuestTable";
 import NavBar from "./components/NavBar";
-
+import SettingsModal from "./components/SettingsModal";
+import { useState } from "react";
 function App() {
+  const [eventName, setEventName] = useState("Event Name");
+  const [showSetModal, setShowSetModal] = useState(false);
+  const [guests, setGuests] = useState([]);
   return (
     <div className="h-screen bg-dark">
-      <NavBar />
-      <DashBoard />
+      <SettingsModal
+        showSetModal={showSetModal}
+        setShowSetModal={setShowSetModal}
+        setEventName={setEventName}
+      />
+      <NavBar showSetModal={showSetModal} setShowSetModal={setShowSetModal} />
+      <DashBoard eventName={eventName} />
       <div className="h-6 bg-lorge"></div>
       <div className="flex bg-dark p-5 gap-5 h-3/6">
         <GuestTable />
