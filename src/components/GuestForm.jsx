@@ -1,9 +1,28 @@
 import { useState } from "react";
-function GuestForm() {
+import getCurrentTime from "../features/getTime";
+function GuestForm({ guests, setGuests }) {
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
   const [sex, setSex] = useState("Choose Sex");
   const [age, setAge] = useState("");
+  let toe = getCurrentTime();
+
+  function NewGuest(name, age, sex, address, toe) {
+    this.name = name;
+    this.address = address;
+    this.sex = sex;
+    this.age = age;
+    this.toe = toe;
+  }
+
+  const addGuest = () => {
+    let guestToAdd = new NewGuest(name, address, sex, age, toe);
+    // setGuests(guests[0].concat(guestToAdd));
+    console.log(guests);
+    // console.log(guests[0]);
+    // getCurrentTime();
+    console.log(guestToAdd);
+  };
 
   return (
     <div className="w-1/3 h-2/3 bg-lorge rounded-md">
@@ -61,7 +80,12 @@ function GuestForm() {
             </div>
           </div>
           <div className="flex  text-light h-10 gap-3 p-1">
-            <button className="w-1/2 bg-orge rounded-md">Save</button>
+            <button
+              className="w-1/2 bg-orge rounded-md"
+              onClick={() => addGuest()}
+            >
+              Save
+            </button>
             <button
               className="w-1/2 bg-orge rounded-md"
               onClick={() => {
