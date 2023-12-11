@@ -1,6 +1,11 @@
 import { useState } from "react";
 
-function SettingsModal({ showSetModal, setShowSetModal, setEventName }) {
+function SettingsModal({
+  showSetModal,
+  setShowSetModal,
+  setEventName,
+  setGuests,
+}) {
   const [nameValue, setNameValue] = useState("");
   {
     if (!showSetModal) return null;
@@ -39,7 +44,14 @@ function SettingsModal({ showSetModal, setShowSetModal, setEventName }) {
               >
                 Save Changes
               </button>
-              <button className="transition-all hover:text-light">
+              <button
+                className="transition-all hover:text-light"
+                onClick={() => {
+                  setGuests([]);
+                  setEventName("My Event");
+                  setShowSetModal(false);
+                }}
+              >
                 Reset Application
               </button>
             </div>

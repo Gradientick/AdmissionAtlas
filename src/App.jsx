@@ -8,15 +8,6 @@ import { useState, useEffect } from "react";
 function App() {
   const [eventName, setEventName] = useState("Event Name");
   const [showSetModal, setShowSetModal] = useState(false);
-  // const [guests, setGuests] = useState([
-  //   {
-  //     name: "Luis",
-  //     age: "19",
-  //     sex: "Male",
-  //     address: "Nagcarlan",
-  //     toe: "13:35",
-  //   },
-  // ]);
   const [attendance, setAttendance] = useState(0);
   const [guests, setGuests] = useState([]);
   useEffect(() => {
@@ -29,6 +20,7 @@ function App() {
         showSetModal={showSetModal}
         setShowSetModal={setShowSetModal}
         setEventName={setEventName}
+        setGuests={setGuests}
       />
       <NavBar showSetModal={showSetModal} setShowSetModal={setShowSetModal} />
       <DashBoard

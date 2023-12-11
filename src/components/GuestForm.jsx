@@ -19,10 +19,10 @@ function GuestForm({ guests, setGuests }) {
     let guestToAdd = new NewGuest(name, address, sex, age, toe);
     setGuests(guests.concat(guestToAdd));
     console.log(guests);
-    // console.log(guests[0]);
-    // getCurrentTime();
-    // let guestObject = guestToAdd;
-    // console.log(guestObject);
+    setName("");
+    setAddress("");
+    setSex("Choose Sex");
+    setAge("");
   };
 
   return (
