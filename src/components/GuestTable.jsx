@@ -1,10 +1,6 @@
 function GuestTable({ guests, setGuests }) {
   const handleDelete = (pos) => {
     console.log("delete button has been clicked");
-    // console.log(index);
-    // console.log(typeof guests);
-    // console.log(typeof index);
-    // setGuests(guests.splice(index));
     let filterAndDeleteGuest = guests.filter(function (_, index) {
       return index !== pos;
     });
@@ -12,7 +8,7 @@ function GuestTable({ guests, setGuests }) {
     console.log(guests);
   };
   return (
-    <div className="w-2/3 flex flex-col gap-1">
+    <div className="w-full flex flex-col gap-1">
       <div className="bg-lorge h-8 rounded-md flex justify-around gap-7 items-center">
         <h1 className="font-semibold">Guest Table</h1>
         <p onClick={() => console.log(guests)}>

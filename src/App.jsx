@@ -29,7 +29,7 @@ function App() {
         setAttendance={setAttendance}
       />
       <div className="h-6 bg-lorge"></div>
-      <div className="flex bg-dark p-5 gap-5 h-3/6">
+      <div className="flex flex-col lg:flex-row bg-dark p-5 gap-5 h-3/6">
         <GuestTable guests={guests} setGuests={setGuests} />
         <GuestForm guests={guests} setGuests={setGuests} />
       </div>

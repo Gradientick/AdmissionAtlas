@@ -26,7 +26,7 @@ function GuestForm({ guests, setGuests }) {
   };
 
   return (
-    <div className="w-1/3 h-2/3 bg-lorge rounded-md">
+    <div className="w-full lg:w-1/4 h-2/3 bg-lorge rounded-md">
       <div className="flex flex-col justify-evenly">
         <h1 className="text-xl font-semibold flex justify-center p-1">
           New Guest Form
