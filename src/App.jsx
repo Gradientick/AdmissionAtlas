@@ -8,70 +8,19 @@ import { useState, useEffect } from "react";
 function App() {
   const [eventName, setEventName] = useState("Event Name");
   const [showSetModal, setShowSetModal] = useState(false);
-  const [guests, setGuests] = useState([
-    [
-      {
-        name: "Luis",
-        age: "19",
-        sex: "Male",
-        address: "Nagcarlan",
-        toe: "13:35",
-      },
-      {
-        name: "Luis",
-        age: "19",
-        sex: "Male",
-        address: "Nagcarlan",
-        toe: "13:35",
-      },
-      {
-        name: "Luis",
-        age: "19",
-        sex: "Male",
-        address: "Nagcarlan",
-        toe: "13:35",
-      },
-      {
-        name: "Luis",
-        age: "19",
-        sex: "Male",
-        address: "Nagcarlan",
-        toe: "13:35",
-      },
-      {
-        name: "Luis",
-        age: "19",
-        sex: "Male",
-        address: "Nagcarlan",
-        toe: "13:35",
-      },
-      {
-        name: "Luis",
-        age: "19",
-        sex: "Male",
-        address: "Nagcarlan",
-        toe: "13:35",
-      },
-      {
-        name: "Luis",
-        age: "19",
-        sex: "Male",
-        address: "Nagcarlan",
-        toe: "13:35",
-      },
-      {
-        name: "Luis",
-        age: "19",
-        sex: "Male",
-        address: "Nagcarlan",
-        toe: "13:35",
-      },
-    ],
-  ]);
+  // const [guests, setGuests] = useState([
+  //   {
+  //     name: "Luis",
+  //     age: "19",
+  //     sex: "Male",
+  //     address: "Nagcarlan",
+  //     toe: "13:35",
+  //   },
+  // ]);
   const [attendance, setAttendance] = useState(0);
-
+  const [guests, setGuests] = useState([]);
   useEffect(() => {
-    setAttendance(guests[0].length);
+    setAttendance(guests.length);
   }, [guests]);
 
   return (

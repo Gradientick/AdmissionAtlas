@@ -17,11 +17,12 @@ function GuestForm({ guests, setGuests }) {
 
   const addGuest = () => {
     let guestToAdd = new NewGuest(name, address, sex, age, toe);
-    // setGuests(guests[0].concat(guestToAdd));
+    setGuests(guests.concat(guestToAdd));
     console.log(guests);
     // console.log(guests[0]);
     // getCurrentTime();
-    console.log(guestToAdd);
+    // let guestObject = guestToAdd;
+    // console.log(guestObject);
   };
 
   return (
